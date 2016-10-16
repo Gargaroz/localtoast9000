@@ -1,6 +1,12 @@
-angular.module('localtoast9000', ['ui.bootstrap','ui.router','ngAnimate']);
+angular.module('localtoast9000', ['ui.router','ngAnimate','ngAria','ngMaterial']);
 
 angular.module('localtoast9000').config(function($stateProvider, $urlRouterProvider) {
+  
+     $stateProvider.state({
+      name: 'welcome',
+      url: '/welcome',
+      template: '<welcome-page></welcome-page>'
+    });
 
     /* Add New States Above */
     $urlRouterProvider.otherwise('/welcome');
